@@ -21,7 +21,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="ILRepack" Version="2.0.42">
+      		<PrivateAssets>all</PrivateAssets>
+      		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="MediaBrowser.Server.Core" Version="4.9.1.80" />
 	</ItemGroup>
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="$(ILRepack) /out:%25AppData%25\Emby-Server\programdata\plugins\$(TargetFileName)" />
+	</Target>
 
 </Project>
+
