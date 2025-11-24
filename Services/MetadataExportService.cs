@@ -366,7 +366,7 @@ namespace MetaExtractor.Services
                     for (int i = 0; i < backdropCount; i++)
                     {
                         cancellationToken.ThrowIfCancellationRequested();
-                        exported |= ExportImage(item, ImageType.Backdrop, directory, i == 0 ? "backdrop" : $"backdrop{i}", config, cancellationToken, i);
+                        exported |= ExportImage(item, ImageType.Backdrop, directory, i == 0 ? "fanart" : $"fanart{i}", config, cancellationToken, i);
                     }
                 }
 
@@ -382,7 +382,7 @@ namespace MetaExtractor.Services
 
                 if (config.ExportThumb && item.HasImage(ImageType.Thumb))
                 {
-                    exported |= ExportImage(item, ImageType.Thumb, directory, "thumb", config, cancellationToken);
+                    exported |= ExportImage(item, ImageType.Thumb, directory, "landscape", config, cancellationToken);
                 }
 
                 if (config.ExportArt && item.HasImage(ImageType.Art))
@@ -392,7 +392,7 @@ namespace MetaExtractor.Services
 
                 if (config.ExportDisc && item.HasImage(ImageType.Disc))
                 {
-                    exported |= ExportImage(item, ImageType.Disc, directory, "disc", config, cancellationToken);
+                    exported |= ExportImage(item, ImageType.Disc, directory, "discart", config, cancellationToken);
                 }
             }
             catch (Exception ex)
@@ -1431,3 +1431,4 @@ namespace MetaExtractor.Services
         public List<string> Errors { get; set; } = new List<string>();
     }
 }
+
