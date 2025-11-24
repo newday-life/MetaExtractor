@@ -366,7 +366,7 @@ namespace MetaExtractor.Services
                     for (int i = 0; i < backdropCount; i++)
                     {
                         cancellationToken.ThrowIfCancellationRequested();
-                        exported |= ExportImage(item, ImageType.Backdrop, directory, i == 0 ? "fanart" : $"fanart{i}", config, cancellationToken, i);
+                        exported |= ExportImage(item, ImageType.Backdrop, i == 0 ? directory : directory + "\\extrafanart", i == 0 ? "fanart" : $"fanart{i}", config, cancellationToken, i);
                     }
                 }
 
@@ -1431,4 +1431,5 @@ namespace MetaExtractor.Services
         public List<string> Errors { get; set; } = new List<string>();
     }
 }
+
 
