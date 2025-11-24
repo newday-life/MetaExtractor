@@ -2,8 +2,8 @@
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
-		<AssemblyName>MetaExtractor</AssemblyName>
-		<OutputType>Library</OutputType>
+		<!--<AssemblyName>MetaExtractor</AssemblyName>-->
+		<!--<OutputType>Library</OutputType>-->
 		<LangVersion>10.0</LangVersion>
 		<Nullable>enable</Nullable>
 		<CopyLocalLockFileAssemblies>True</CopyLocalLockFileAssemblies>
@@ -11,7 +11,7 @@
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<AssemblyVersion>1.0.1.1</AssemblyVersion>
 		<FileVersion>1.0.1.1</FileVersion>
-		<RootNamespace>MetaExtractor</RootNamespace>
+		<!--<RootNamespace>MetaExtractor</RootNamespace>-->
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -32,6 +32,7 @@
 	</Target>
 
 </Project>
+
 
 
 
