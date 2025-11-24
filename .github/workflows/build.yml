@@ -31,4 +31,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: MetaExtractor
-          path: $(TargetPath)
+          path: D:\a\MetaExtractor\MetaExtractor\bin\Release\net6.0\MetaExtractor.dll
