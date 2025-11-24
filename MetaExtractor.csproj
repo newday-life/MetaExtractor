@@ -4,10 +4,10 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<AssemblyName>MetaExtractor</AssemblyName>
 		<OutputType>Library</OutputType>
-
 		<LangVersion>10.0</LangVersion>
 		<Nullable>enable</Nullable>
-
+		<CopyLocalLockFileAssemblies>True</CopyLocalLockFileAssemblies>
+		<IncludeSourceRevisionInInformationalVersion>true</IncludeSourceRevisionInInformationalVersion>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<AssemblyVersion>1.0.1.1</AssemblyVersion>
 		<FileVersion>1.0.1.1</FileVersion>
@@ -28,10 +28,11 @@
 		<PackageReference Include="MediaBrowser.Server.Core" Version="4.9.1.90" />
 	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Command="$(ILRepack) /out:%25AppData%25\Emby-Server\programdata\plugins\$(TargetFileName)  $(TargetPath)" />
+		<Exec Command="$(ILRepack) /out:%25AppData%25\Emby-Server\programdata\plugins\$(TargetFileName)" />
 	</Target>
 
 </Project>
+
 
 
 
