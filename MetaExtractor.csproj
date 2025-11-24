@@ -25,12 +25,13 @@
       		<PrivateAssets>all</PrivateAssets>
       		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="MediaBrowser.Server.Core" Version="4.9.1.80" />
+		<PackageReference Include="MediaBrowser.Server.Core" Version="4.9.1.90" />
 	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="$(ILRepack) /out:%25AppData%25\Emby-Server\programdata\plugins\$(TargetFileName)  $(TargetPath)" />
 	</Target>
 
 </Project>
+
 
 
