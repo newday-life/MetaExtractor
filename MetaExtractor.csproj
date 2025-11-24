@@ -19,9 +19,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="MediaBrowser.Server.Core" Version="4.7.14.0" />
+		<PackageReference Include="MediaBrowser.Server.Core" Version="4.9.1.90" />
 	</ItemGroup>
 </Project>
+
 
 
 
